@@ -6,12 +6,10 @@ export default function Header({
   incrementarQuantity,
   decrementarQuantity,
   clearCart,
+  isEmpty,
+  cartTotal
 }) {
-  const isEmpty = useMemo(() => cart.leng === 0)[cart];
-  const cartTotal = useMemo(
-    () => cart.reduce((total, item) => total + item.quantity * item.price, 0),
-    [cart],
-  );
+   
   return (
     <>
       <header className="py-5 header">
